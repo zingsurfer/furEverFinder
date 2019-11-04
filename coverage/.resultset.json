@@ -18,26 +18,54 @@
         1,
         1,
         1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        2,
         null,
         1,
         null,
         1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null,
         null
       ],
       "/Users/autumnmartin/projects/2019/furEverFinder/app/controllers/api/v1/searches_controller.rb": [
         1,
         1,
-        1,
-        1,
+        2,
+        2,
         null,
         null
       ],
       "/Users/autumnmartin/projects/2019/furEverFinder/app/controllers/application_controller.rb": [
         1,
         null
+      ],
+      "/Users/autumnmartin/projects/2019/furEverFinder/app/serializers/api/v1/search_serializer.rb": [
+        1,
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1572831714
+    "timestamp": 1572835495
   }
 }
