@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-11-04T00:39:25-07:00">2019-11-04T00:39:25-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-11-05T06:42:24-07:00">2019-11-05T06:42:24-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.69
+         1.94
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>6</b> files in total.
-    <b>94</b> relevant lines. 
-    <span class="green"><b>94</b> lines covered</span> and
+    <b>98</b> relevant lines. 
+    <span class="green"><b>98</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,11 +53,11 @@
       <tr>
         <td class="strong"><a href="#ee2db1d201d3b6118816c43780d82d4296a8d02f" class="src_link" title="app/controllers/api/v1/searches_controller.rb">app/controllers/api/v1/searches_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>16</td>
-        <td>9</td>
-        <td>9</td>
+        <td>24</td>
+        <td>13</td>
+        <td>13</td>
         <td>0</td>
-        <td>6.2</td>
+        <td>6.7</td>
       </tr>
       
       <tr>
@@ -131,8 +131,8 @@
     <h3>app/controllers/api/v1/searches_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>9</b> relevant lines. 
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>13</b> relevant lines. 
+      <span class="green"><b>13</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -155,13 +155,13 @@
         <li class="covered" data-hits="10" data-linenumber="3">
           <span class="hits">10</span>
           
-          <code class="ruby">    if params.keys.count - 2 &gt; search_params.keys.count</code>
+          <code class="ruby">    if any_invalid_params?</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="4">
           <span class="hits">2</span>
           
-          <code class="ruby">      return render json: {error: &quot;invalid parameter key&quot;}, status: 400</code>
+          <code class="ruby">      return render json: {error: &quot;invalid query parameters&quot;}, status: 400</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
@@ -231,6 +231,54 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">  # TODO: find a better way to achieve this</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def any_invalid_params?</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="19">
+          <span class="hits">10</span>
+          
+          <code class="ruby">    actual_param_count = params.except(:controller, :action).keys.count</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="20">
+          <span class="hits">10</span>
+          
+          <code class="ruby">    allowed_param_count = search_params.keys.count</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="22">
+          <span class="hits">10</span>
+          
+          <code class="ruby">    actual_param_count &gt; allowed_param_count</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">end</code>
@@ -700,7 +748,7 @@
         <li class="covered" data-hits="1" data-linenumber="39">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(searches[&quot;error&quot;]).to eq(&quot;invalid parameter key&quot;)</code>
+          <code class="ruby">      expect(searches[&quot;error&quot;]).to eq(&quot;invalid query parameters&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="40">
@@ -1102,7 +1150,7 @@
         <li class="covered" data-hits="1" data-linenumber="106">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(searches[&quot;error&quot;]).to eq(&quot;invalid parameter key&quot;)</code>
+          <code class="ruby">      expect(searches[&quot;error&quot;]).to eq(&quot;invalid query parameters&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="107">

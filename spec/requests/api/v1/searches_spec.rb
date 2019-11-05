@@ -36,7 +36,7 @@ RSpec.describe 'GET /api/v1/searches', type: :request do
       searches = JSON.parse(response.body)
 
       expect(response).to have_http_status(400)
-      expect(searches["error"]).to eq("invalid parameter key")
+      expect(searches["error"]).to eq("invalid query parameters")
     end
 
     it 'returns an empty array for requests with invalid param values' do
@@ -103,7 +103,7 @@ RSpec.describe 'GET /api/v1/searches', type: :request do
       searches = JSON.parse(response.body)
 
       expect(response).to have_http_status(400)
-      expect(searches["error"]).to eq("invalid parameter key")
+      expect(searches["error"]).to eq("invalid query parameters")
     end
 
     it 'returns an empty array for requests with invalid param values' do

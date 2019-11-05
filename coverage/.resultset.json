@@ -158,6 +158,14 @@
         1,
         24,
         null,
+        null,
+        null,
+        1,
+        10,
+        10,
+        null,
+        10,
+        null,
         null
       ],
       "/Users/autumnmartin/projects/2019/furEverFinder/app/controllers/application_controller.rb": [
@@ -171,6 +179,6 @@
         null
       ]
     },
-    "timestamp": 1572853165
+    "timestamp": 1572961344
   }
 }
