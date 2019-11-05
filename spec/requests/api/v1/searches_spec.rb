@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'GET /api/v1/searches', type: :request do
   context 'without data' do
     it 'returns an empty array for general requests' do
-      get "/api/v1/searches"
+      get '/api/v1/searches'
 
       searches = JSON.parse(response.body)
 
@@ -12,7 +12,7 @@ RSpec.describe 'GET /api/v1/searches', type: :request do
     end
 
     it 'returns an empty array for requests ordering by newist' do
-      get "/api/v1/searches?ordered_by=newist"
+      get '/api/v1/searches?ordered_by=newist'
 
       searches = JSON.parse(response.body)
 
@@ -21,7 +21,7 @@ RSpec.describe 'GET /api/v1/searches', type: :request do
     end
 
     it 'returns an empty array for requests ordering by oldest' do
-      get "/api/v1/searches?ordered_by=oldest"
+      get '/api/v1/searches?ordered_by=oldest'
 
       searches = JSON.parse(response.body)
 
@@ -29,19 +29,41 @@ RSpec.describe 'GET /api/v1/searches', type: :request do
       expect(searches["data"]).to eq([])
     end
 
-    it 'returns error response for requests with invalid param keys' do
+    it 'returns expected error for requests with an invalid param key' do
+      valid_param = 'ordered_by'
+      valid_value = 'oldest'
+      invalid_param = 'galapagos'
 
-      get "/api/v1/searches?zebras=newist"
+      get "/api/v1/searches?#{invalid_param}=#{valid_value}&#{valid_param}=#{valid_value}"
 
       searches = JSON.parse(response.body)
 
       expect(response).to have_http_status(400)
-      expect(searches["error"]).to eq("invalid query parameters")
+      expect(searches["error"]).to eq(
+        "Invalid query parameter(s): #{invalid_param}. Please verify the query parameter name(s)."
+      )
+    end
+
+    it 'returns expected error for requests with multiple invalid param keys' do
+      valid_param = 'ordered_by'
+      valid_value = 'newist'
+      invalid_param_1 = 'kiwi'
+      invalid_param_2 = 'mango'
+      invalid_param_3 = 'melon'
+
+      get "/api/v1/searches?#{invalid_param_1}=#{valid_value}&#{invalid_param_2}=#{valid_value}&#{invalid_param_3}=#{valid_value}&#{valid_param}"
+
+      searches = JSON.parse(response.body)
+
+      expect(response).to have_http_status(400)
+      expect(searches["error"]).to eq(
+        "Invalid query parameter(s): #{invalid_param_1}, #{invalid_param_2}, and #{invalid_param_3}. Please verify the query parameter name(s)."
+      )
     end
 
     it 'returns an empty array for requests with invalid param values' do
 
-      get "/api/v1/searches?ordered_by=doesnotcompute"
+      get '/api/v1/searches?ordered_by=doesnotcompute'
 
       searches = JSON.parse(response.body)
 
@@ -55,7 +77,7 @@ RSpec.describe 'GET /api/v1/searches', type: :request do
 
     it 'returns searches for general requests' do
 
-      get "/api/v1/searches"
+      get '/api/v1/searches'
 
       searches = JSON.parse(response.body)
 
@@ -69,7 +91,7 @@ RSpec.describe 'GET /api/v1/searches', type: :request do
     end
 
     it 'returns searches for requests ordering by newist' do
-      get "/api/v1/searches?ordered_by=newist"
+      get '/api/v1/searches?ordered_by=newist'
 
       searches = JSON.parse(response.body)
 
@@ -84,7 +106,7 @@ RSpec.describe 'GET /api/v1/searches', type: :request do
 
     it 'returns searches for requests ordering by oldest' do
 
-      get "/api/v1/searches?ordered_by=oldest"
+      get '/api/v1/searches?ordered_by=oldest'
 
       searches = JSON.parse(response.body)
 
@@ -98,12 +120,15 @@ RSpec.describe 'GET /api/v1/searches', type: :request do
     end
 
     it 'returns error response for requests with invalid param keys' do
-      get "/api/v1/searches?invalid_kayak=newist"
+      invalid_param = 'skydiver'
+      valid_value = 'newist'
+
+      get "/api/v1/searches?#{invalid_param}=#{valid_value}"
 
       searches = JSON.parse(response.body)
 
       expect(response).to have_http_status(400)
-      expect(searches["error"]).to eq("invalid query parameters")
+      expect(searches["error"]).to eq("Invalid query parameter(s): #{invalid_param}. Please verify the query parameter name(s).")
     end
 
     it 'returns an empty array for requests with invalid param values' do
