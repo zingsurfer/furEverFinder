@@ -9,6 +9,8 @@ RSpec.describe 'GET /api/v1/searches', type: :request do
 
       expect(response).to be_successful
       expect(searches["data"]).to eq([])
+      expect(response.header["Accept"]).to eq("application/json")
+      expect(response.header["Content-Type"]).to eq("application/json")
     end
 
     it 'returns an empty array for requests ordering by newist' do
@@ -18,6 +20,8 @@ RSpec.describe 'GET /api/v1/searches', type: :request do
 
       expect(response).to be_successful
       expect(searches["data"]).to eq([])
+      expect(response.header["Accept"]).to eq("application/json")
+      expect(response.header["Content-Type"]).to eq("application/json")
     end
 
     it 'returns an empty array for requests ordering by oldest' do
@@ -27,6 +31,8 @@ RSpec.describe 'GET /api/v1/searches', type: :request do
 
       expect(response).to be_successful
       expect(searches["data"]).to eq([])
+      expect(response.header["Accept"]).to eq("application/json")
+      expect(response.header["Content-Type"]).to eq("application/json")
     end
 
     it 'returns expected error for requests with an invalid param key' do
@@ -42,6 +48,8 @@ RSpec.describe 'GET /api/v1/searches', type: :request do
       expect(searches["error"]).to eq(
         "Invalid query parameter(s): #{invalid_param}. Please verify the query parameter name(s)."
       )
+      expect(response.header["Accept"]).to eq("application/json")
+      expect(response.header["Content-Type"]).to eq("application/json")
     end
 
     it 'returns expected error for requests with multiple invalid param keys' do
@@ -59,6 +67,8 @@ RSpec.describe 'GET /api/v1/searches', type: :request do
       expect(searches["error"]).to eq(
         "Invalid query parameter(s): #{invalid_param_1}, #{invalid_param_2}, and #{invalid_param_3}. Please verify the query parameter name(s)."
       )
+      expect(response.header["Accept"]).to eq("application/json")
+      expect(response.header["Content-Type"]).to eq("application/json")
     end
 
     it 'returns an empty array for requests with invalid param values' do
@@ -69,6 +79,8 @@ RSpec.describe 'GET /api/v1/searches', type: :request do
 
       expect(response).to be_successful
       expect(searches["data"]).to eq([])
+      expect(response.header["Accept"]).to eq("application/json")
+      expect(response.header["Content-Type"]).to eq("application/json")
     end
   end
 
@@ -88,6 +100,8 @@ RSpec.describe 'GET /api/v1/searches', type: :request do
       expect(searches["data"][0]["attributes"]).to have_key("url")
       expect(searches["data"][0]["attributes"]).to have_key("created_at")
       expect(searches["data"][0]["attributes"]).to have_key("updated_at")
+      expect(response.header["Accept"]).to eq("application/json")
+      expect(response.header["Content-Type"]).to eq("application/json")
     end
 
     it 'returns searches for requests ordering by newist' do
@@ -102,6 +116,8 @@ RSpec.describe 'GET /api/v1/searches', type: :request do
       expect(searches["data"][0]["attributes"]).to have_key("url")
       expect(searches["data"][0]["attributes"]).to have_key("created_at")
       expect(searches["data"][0]["attributes"]).to have_key("updated_at")
+      expect(response.header["Accept"]).to eq("application/json")
+      expect(response.header["Content-Type"]).to eq("application/json")
     end
 
     it 'returns searches for requests ordering by oldest' do
@@ -117,6 +133,8 @@ RSpec.describe 'GET /api/v1/searches', type: :request do
       expect(searches["data"][0]["attributes"]).to have_key("url")
       expect(searches["data"][0]["attributes"]).to have_key("created_at")
       expect(searches["data"][0]["attributes"]).to have_key("updated_at")
+      expect(response.header["Accept"]).to eq("application/json")
+      expect(response.header["Content-Type"]).to eq("application/json")
     end
 
     it 'returns error response for requests with invalid param keys' do
@@ -129,6 +147,8 @@ RSpec.describe 'GET /api/v1/searches', type: :request do
 
       expect(response).to have_http_status(400)
       expect(searches["error"]).to eq("Invalid query parameter(s): #{invalid_param}. Please verify the query parameter name(s).")
+      expect(response.header["Accept"]).to eq("application/json")
+      expect(response.header["Content-Type"]).to eq("application/json")
     end
 
     it 'returns an empty array for requests with invalid param values' do
@@ -138,6 +158,8 @@ RSpec.describe 'GET /api/v1/searches', type: :request do
 
       expect(response).to be_successful
       expect(searches["data"]).to eq([])
+      expect(response.header["Accept"]).to eq("application/json")
+      expect(response.header["Content-Type"]).to eq("application/json")
     end
   end
 end
