@@ -29,7 +29,14 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'fast_jsonapi'
 
 # To keep precious vars secret & safe
-gem "figaro"
+gem 'figaro'
+
+# HTTP client library
+gem 'faraday'
+
+# Data library for testing & beyond
+# Needed for all environments currently (used in this app for rad dog names)
+gem 'faker'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
@@ -47,7 +54,6 @@ end
 
 group :test do
   gem 'factory_bot_rails' # Helper for building test factories
-  gem 'faker' # Library to generate fake data
   gem 'simplecov', require: false
   gem 'shoulda-matchers' # Library of one-liner tests
   gem 'database_cleaner' # Database cleaning
