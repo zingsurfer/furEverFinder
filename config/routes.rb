@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get '/searches', to: 'searches#index'
+      get '/dog_pics/random', to: 'dog_pics#show'
     end
   end
 end
