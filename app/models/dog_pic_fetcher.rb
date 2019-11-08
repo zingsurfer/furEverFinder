@@ -10,7 +10,7 @@ class DogPicFetcher
   private
 
   def random_dog_pic
-    Api::V1::DogCEOService.new(@type).random_pic_of_requested_dog_type
+    Api::V1::DogCEOService.new(@type).random_dog_pic
   end
 
   def random_dog_name

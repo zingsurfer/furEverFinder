@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-11-07T20:56:04-07:00">2019-11-07T20:56:04-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-11-07T21:40:36-07:00">2019-11-07T21:40:36-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">98.07%</span></span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.49
+         1.53
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>11</b> files in total.
-    <b>207</b> relevant lines. 
-    <span class="green"><b>203</b> lines covered</span> and
-    <span class="red"><b>4</b> lines missed </span>
+    <b>215</b> relevant lines. 
+    <span class="green"><b>215</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -53,11 +53,11 @@
       <tr>
         <td class="strong"><a href="#f3cd845c4d51bc68d2cd4cc72878103172d3f059" class="src_link" title="app/controllers/api/v1/dog_pics_controller.rb">app/controllers/api/v1/dog_pics_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>18</td>
-        <td>10</td>
-        <td>10</td>
+        <td>20</td>
+        <td>11</td>
+        <td>11</td>
         <td>0</td>
-        <td>1.7</td>
+        <td>2.0</td>
       </tr>
       
       <tr>
@@ -97,7 +97,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>1.4</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
@@ -107,7 +107,7 @@
         <td>10</td>
         <td>10</td>
         <td>0</td>
-        <td>1.7</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
@@ -133,21 +133,21 @@
       <tr>
         <td class="strong"><a href="#50d10673b7fa080d7509ea56e1de2eb565a74ac5" class="src_link" title="app/services/api/v1/dog_ceo_service.rb">app/services/api/v1/dog_ceo_service.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>21</td>
-        <td>12</td>
-        <td>12</td>
+        <td>35</td>
+        <td>19</td>
+        <td>19</td>
         <td>0</td>
-        <td>1.9</td>
+        <td>1.7</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#1a9d5f50b36276784613464c035258ae81a94465" class="src_link" title="spec/requests/api/v1/dog_pics_controller_spec.rb">spec/requests/api/v1/dog_pics_controller_spec.rb</a></td>
-        <td class="yellow strong">87.88 %</td>
+        <td class="green strong">100.0 %</td>
         <td>50</td>
         <td>33</td>
-        <td>29</td>
-        <td>4</td>
-        <td>0.9</td>
+        <td>33</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -181,8 +181,8 @@
     <h3>app/controllers/api/v1/dog_pics_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>10</b> relevant lines. 
-      <span class="green"><b>10</b> lines covered</span> and
+      <b>11</b> relevant lines. 
+      <span class="green"><b>11</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -205,7 +205,7 @@
         <li class="covered" data-hits="4" data-linenumber="3">
           <span class="hits">4</span>
           
-          <code class="ruby">    find = DogPicFetcher.new(dog_pic_params[:type]).dog_pic</code>
+          <code class="ruby">    find =  DogPicFetcher.new(dog_pic_params[:type]).dog_pic</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
@@ -214,8 +214,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="5">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="5">
+          <span class="hits">3</span>
           
           <code class="ruby">    if find.image_url == nil</code>
         </li>
@@ -232,14 +232,14 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="8">
+          <span class="hits">2</span>
           
           <code class="ruby">      search_url = request.original_url</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
           
           <code class="ruby">      Search.create(url: search_url)</code>
         </li>
@@ -250,8 +250,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="11">
+          <span class="hits">2</span>
           
           <code class="ruby">      render json: find, status: 200</code>
         </li>
@@ -277,22 +277,34 @@
         <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
           <code class="ruby">  def dog_pic_params</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="16">
+        <li class="covered" data-hits="4" data-linenumber="18">
           <span class="hits">4</span>
           
           <code class="ruby">    params.permit(:type)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby">end</code>
@@ -590,14 +602,14 @@
           <code class="ruby">  def initialize(image_url, name)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="6">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="6">
+          <span class="hits">3</span>
           
           <code class="ruby">    @image_url = image_url</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="7">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="7">
+          <span class="hits">3</span>
           
           <code class="ruby">    @name = name</code>
         </li>
@@ -708,7 +720,7 @@
         <li class="covered" data-hits="3" data-linenumber="13">
           <span class="hits">3</span>
           
-          <code class="ruby">    Api::V1::DogCEOService.new(@type).random_pic_of_requested_dog_type</code>
+          <code class="ruby">    Api::V1::DogCEOService.new(@type).random_dog_pic</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
@@ -729,8 +741,8 @@
           <code class="ruby">  def random_dog_name</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="17">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="17">
+          <span class="hits">3</span>
           
           <code class="ruby">    Faker::Superhero.name</code>
         </li>
@@ -903,8 +915,8 @@
     <h3>app/services/api/v1/dog_ceo_service.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>12</b> relevant lines. 
-      <span class="green"><b>12</b> lines covered</span> and
+      <b>19</b> relevant lines. 
+      <span class="green"><b>19</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -945,94 +957,178 @@
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">  def random_pic_of_requested_dog_type</code>
+          <code class="ruby">  def random_dog_pic</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="7">
           <span class="hits">3</span>
           
-          <code class="ruby">    response = JSON.parse(response(&quot;#{@type}/images/random&quot;).body)</code>
+          <code class="ruby">    if !@type</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="8">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
           
-          <code class="ruby">    response[&quot;status&quot;] !=  &quot;error&quot; ? response[&quot;message&quot;] : nil</code>
+          <code class="ruby">      random_any_type_of_dog_pic</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    else</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="covered" data-hits="2" data-linenumber="10">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">      random_specific_type_of_dog_pic</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  private</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="12">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def conn</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="13">
-          <span class="hits">3</span>
-          
-          <code class="ruby">    Faraday.new(url: &quot;https://dog.ceo/api/breed/&quot;) do |f|</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="14">
-          <span class="hits">3</span>
-          
-          <code class="ruby">      f.adapter Faraday.default_adapter  # make requests with HTTP</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">  def response(url)</code>
+          <code class="ruby">  private</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="19">
-          <span class="hits">3</span>
+        <li class="never" data-hits="" data-linenumber="15">
           
-          <code class="ruby">    conn.get(url)</code>
+          
+          <code class="ruby">  </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def random_specific_type_of_dog_pic</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="17">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    response = JSON.parse(response(&quot;breed/#{@type}/images/random&quot;).body)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="18">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    response[&quot;status&quot;] !=  &quot;error&quot; ? response[&quot;message&quot;] : nil</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def random_any_type_of_dog_pic</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    response = JSON.parse(response(&quot;breeds/image/random&quot;).body)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    response[&quot;status&quot;] !=  &quot;error&quot; ? response[&quot;message&quot;] : nil</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def conn</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="27">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    Faraday.new(url: &quot;https://dog.ceo/api/&quot;) do |f|</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="28">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      f.adapter Faraday.default_adapter  # make requests with HTTP</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def response(url)</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="33">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    conn.get(url)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
           
           
           <code class="ruby">end</code>
@@ -1046,11 +1142,11 @@
         <div class="source_table" id="1a9d5f50b36276784613464c035258ae81a94465">
   <div class="header">
     <h3>spec/requests/api/v1/dog_pics_controller_spec.rb</h3>
-    <h4><span class="yellow">87.88 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>33</b> relevant lines. 
-      <span class="green"><b>29</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
+      <span class="green"><b>33</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -1147,26 +1243,26 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="16">
-          
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
           
           <code class="ruby">      expect(Search.all.length()).to eq(1)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="17">
-          
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
           
           <code class="ruby">      expect(response).to be_successful</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="18">
-          
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
           
           <code class="ruby">      expect(response.header[&quot;Accept&quot;]).to eq(&quot;application/json&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="19">
-          
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
           
           <code class="ruby">      expect(response.header[&quot;Content-Type&quot;]).to eq(&quot;application/json&quot;)</code>
         </li>

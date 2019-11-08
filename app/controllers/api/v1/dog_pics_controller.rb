@@ -12,6 +12,8 @@ class Api::V1::DogPicsController < ApplicationController
     end
   end
 
+  private
+
   def dog_pic_params
     params.permit(:type)
   end
