@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-11-07T21:40:36-07:00">2019-11-07T21:40:36-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-11-07T22:43:29-07:00">2019-11-07T22:43:29-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.53
+         1.52
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>11</b> files in total.
-    <b>215</b> relevant lines. 
-    <span class="green"><b>215</b> lines covered</span> and
+    <b>218</b> relevant lines. 
+    <span class="green"><b>218</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -153,9 +153,9 @@
       <tr>
         <td class="strong"><a href="#f33e33ea08203bae8def01538989d0f116d00982" class="src_link" title="spec/requests/api/v1/searches_spec.rb">spec/requests/api/v1/searches_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>165</td>
-        <td>107</td>
-        <td>107</td>
+        <td>168</td>
+        <td>110</td>
+        <td>110</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -205,7 +205,7 @@
         <li class="covered" data-hits="4" data-linenumber="3">
           <span class="hits">4</span>
           
-          <code class="ruby">    find =  DogPicFetcher.new(dog_pic_params[:type]).dog_pic</code>
+          <code class="ruby">    find = DogPicFetcher.new(dog_pic_params[:type]).dog_pic</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
@@ -896,7 +896,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">  attributes :url, :created_at, :updated_at</code>
+          <code class="ruby">  attributes :topic, :url, :created_at, :updated_at</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
@@ -1463,8 +1463,8 @@
     <h3>spec/requests/api/v1/searches_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>107</b> relevant lines. 
-      <span class="green"><b>107</b> lines covered</span> and
+      <b>110</b> relevant lines. 
+      <span class="green"><b>110</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2069,145 +2069,145 @@
         <li class="covered" data-hits="1" data-linenumber="100">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(searches[&quot;data&quot;][0][&quot;attributes&quot;]).to have_key(&quot;url&quot;)</code>
+          <code class="ruby">      expect(searches[&quot;data&quot;][0][&quot;attributes&quot;]).to have_key(&quot;topic&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="101">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(searches[&quot;data&quot;][0][&quot;attributes&quot;]).to have_key(&quot;created_at&quot;)</code>
+          <code class="ruby">      expect(searches[&quot;data&quot;][0][&quot;attributes&quot;]).to have_key(&quot;url&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="102">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(searches[&quot;data&quot;][0][&quot;attributes&quot;]).to have_key(&quot;updated_at&quot;)</code>
+          <code class="ruby">      expect(searches[&quot;data&quot;][0][&quot;attributes&quot;]).to have_key(&quot;created_at&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="103">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(response.header[&quot;Accept&quot;]).to eq(&quot;application/json&quot;)</code>
+          <code class="ruby">      expect(searches[&quot;data&quot;][0][&quot;attributes&quot;]).to have_key(&quot;updated_at&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="104">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(response.header[&quot;Content-Type&quot;]).to eq(&quot;application/json&quot;)</code>
+          <code class="ruby">      expect(response.header[&quot;Accept&quot;]).to eq(&quot;application/json&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="105">
+        <li class="covered" data-hits="1" data-linenumber="105">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      expect(response.header[&quot;Content-Type&quot;]).to eq(&quot;application/json&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="106">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="107">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="107">
           
-          <code class="ruby">    it &#39;returns searches for requests ordering by newist&#39; do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="108">
           <span class="hits">1</span>
           
+          <code class="ruby">    it &#39;returns searches for requests ordering by newist&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="109">
+          <span class="hits">1</span>
+          
           <code class="ruby">      get &#39;/api/v1/searches?ordered_by=newist&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="109">
+        <li class="never" data-hits="" data-linenumber="110">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="110">
+        <li class="covered" data-hits="1" data-linenumber="111">
           <span class="hits">1</span>
           
           <code class="ruby">      searches = JSON.parse(response.body)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="111">
+        <li class="never" data-hits="" data-linenumber="112">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="112">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      expect(response).to be_successful</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="113">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(searches[&quot;data&quot;][0]).to have_key(&quot;id&quot;)</code>
+          <code class="ruby">      expect(response).to be_successful</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="114">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(searches[&quot;data&quot;][0]).to have_key(&quot;type&quot;)</code>
+          <code class="ruby">      expect(searches[&quot;data&quot;][0]).to have_key(&quot;id&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="115">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(searches[&quot;data&quot;][0]).to have_key(&quot;attributes&quot;)</code>
+          <code class="ruby">      expect(searches[&quot;data&quot;][0]).to have_key(&quot;type&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="116">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(searches[&quot;data&quot;][0][&quot;attributes&quot;]).to have_key(&quot;url&quot;)</code>
+          <code class="ruby">      expect(searches[&quot;data&quot;][0]).to have_key(&quot;attributes&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="117">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(searches[&quot;data&quot;][0][&quot;attributes&quot;]).to have_key(&quot;created_at&quot;)</code>
+          <code class="ruby">      expect(searches[&quot;data&quot;][0][&quot;attributes&quot;]).to have_key(&quot;topic&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="118">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(searches[&quot;data&quot;][0][&quot;attributes&quot;]).to have_key(&quot;updated_at&quot;)</code>
+          <code class="ruby">      expect(searches[&quot;data&quot;][0][&quot;attributes&quot;]).to have_key(&quot;url&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="119">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(response.header[&quot;Accept&quot;]).to eq(&quot;application/json&quot;)</code>
+          <code class="ruby">      expect(searches[&quot;data&quot;][0][&quot;attributes&quot;]).to have_key(&quot;created_at&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="120">
           <span class="hits">1</span>
           
+          <code class="ruby">      expect(searches[&quot;data&quot;][0][&quot;attributes&quot;]).to have_key(&quot;updated_at&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="121">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response.header[&quot;Accept&quot;]).to eq(&quot;application/json&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="122">
+          <span class="hits">1</span>
+          
           <code class="ruby">      expect(response.header[&quot;Content-Type&quot;]).to eq(&quot;application/json&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="121">
+        <li class="never" data-hits="" data-linenumber="123">
           
           
           <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="122">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="123">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    it &#39;returns searches for requests ordering by oldest&#39; do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="124">
@@ -2219,7 +2219,7 @@
         <li class="covered" data-hits="1" data-linenumber="125">
           <span class="hits">1</span>
           
-          <code class="ruby">      get &#39;/api/v1/searches?ordered_by=oldest&#39;</code>
+          <code class="ruby">    it &#39;returns searches for requests ordering by oldest&#39; do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="126">
@@ -2231,7 +2231,7 @@
         <li class="covered" data-hits="1" data-linenumber="127">
           <span class="hits">1</span>
           
-          <code class="ruby">      searches = JSON.parse(response.body)</code>
+          <code class="ruby">      get &#39;/api/v1/searches?ordered_by=oldest&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="128">
@@ -2243,163 +2243,163 @@
         <li class="covered" data-hits="1" data-linenumber="129">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(response).to be_successful</code>
+          <code class="ruby">      searches = JSON.parse(response.body)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="130">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="130">
           
-          <code class="ruby">      expect(searches[&quot;data&quot;][0]).to have_key(&quot;id&quot;)</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="131">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(searches[&quot;data&quot;][0]).to have_key(&quot;type&quot;)</code>
+          <code class="ruby">      expect(response).to be_successful</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="132">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(searches[&quot;data&quot;][0]).to have_key(&quot;attributes&quot;)</code>
+          <code class="ruby">      expect(searches[&quot;data&quot;][0]).to have_key(&quot;id&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="133">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(searches[&quot;data&quot;][0][&quot;attributes&quot;]).to have_key(&quot;url&quot;)</code>
+          <code class="ruby">      expect(searches[&quot;data&quot;][0]).to have_key(&quot;type&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="134">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(searches[&quot;data&quot;][0][&quot;attributes&quot;]).to have_key(&quot;created_at&quot;)</code>
+          <code class="ruby">      expect(searches[&quot;data&quot;][0]).to have_key(&quot;attributes&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="135">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(searches[&quot;data&quot;][0][&quot;attributes&quot;]).to have_key(&quot;updated_at&quot;)</code>
+          <code class="ruby">      expect(searches[&quot;data&quot;][0][&quot;attributes&quot;]).to have_key(&quot;topic&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="136">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(response.header[&quot;Accept&quot;]).to eq(&quot;application/json&quot;)</code>
+          <code class="ruby">      expect(searches[&quot;data&quot;][0][&quot;attributes&quot;]).to have_key(&quot;url&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="137">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(response.header[&quot;Content-Type&quot;]).to eq(&quot;application/json&quot;)</code>
+          <code class="ruby">      expect(searches[&quot;data&quot;][0][&quot;attributes&quot;]).to have_key(&quot;created_at&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="138">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="139">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="140">
+        <li class="covered" data-hits="1" data-linenumber="138">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;returns error response for requests with invalid param keys&#39; do</code>
+          <code class="ruby">      expect(searches[&quot;data&quot;][0][&quot;attributes&quot;]).to have_key(&quot;updated_at&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="141">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      invalid_param = &#39;skydiver&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="142">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      valid_value = &#39;newist&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="143">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="144">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      get &quot;/api/v1/searches?#{invalid_param}=#{valid_value}&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="145">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="146">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      searches = JSON.parse(response.body)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="147">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="148">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      expect(response).to have_http_status(400)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="149">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      expect(searches[&quot;error&quot;]).to eq(&quot;Invalid query parameter(s): #{invalid_param}. Please verify the query parameter name(s).&quot;)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="150">
+        <li class="covered" data-hits="1" data-linenumber="139">
           <span class="hits">1</span>
           
           <code class="ruby">      expect(response.header[&quot;Accept&quot;]).to eq(&quot;application/json&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="151">
+        <li class="covered" data-hits="1" data-linenumber="140">
           <span class="hits">1</span>
           
           <code class="ruby">      expect(response.header[&quot;Content-Type&quot;]).to eq(&quot;application/json&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="152">
+        <li class="never" data-hits="" data-linenumber="141">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="153">
+        <li class="never" data-hits="" data-linenumber="142">
           
           
           <code class="ruby"></code>
         </li>
       
+        <li class="covered" data-hits="1" data-linenumber="143">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;returns error response for requests with invalid param keys&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="144">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      invalid_param = &#39;skydiver&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="145">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      valid_value = &#39;newist&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="146">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="147">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      get &quot;/api/v1/searches?#{invalid_param}=#{valid_value}&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="148">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="149">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      searches = JSON.parse(response.body)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="150">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="151">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(400)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="152">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(searches[&quot;error&quot;]).to eq(&quot;Invalid query parameter(s): #{invalid_param}. Please verify the query parameter name(s).&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="153">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response.header[&quot;Accept&quot;]).to eq(&quot;application/json&quot;)</code>
+        </li>
+      
         <li class="covered" data-hits="1" data-linenumber="154">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;returns an empty array for requests with invalid param values&#39; do</code>
+          <code class="ruby">      expect(response.header[&quot;Content-Type&quot;]).to eq(&quot;application/json&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="155">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="155">
           
-          <code class="ruby">      get &quot;/api/v1/searches?ordered_by=doesnotcompute&quot;</code>
+          
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="156">
@@ -2411,52 +2411,70 @@
         <li class="covered" data-hits="1" data-linenumber="157">
           <span class="hits">1</span>
           
-          <code class="ruby">      searches = JSON.parse(response.body)</code>
+          <code class="ruby">    it &#39;returns an empty array for requests with invalid param values&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="158">
+        <li class="covered" data-hits="1" data-linenumber="158">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      get &quot;/api/v1/searches?ordered_by=doesnotcompute&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="159">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="159">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      expect(response).to be_successful</code>
-        </li>
-      
         <li class="covered" data-hits="1" data-linenumber="160">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(searches[&quot;data&quot;]).to eq([])</code>
+          <code class="ruby">      searches = JSON.parse(response.body)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="161">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="161">
           
-          <code class="ruby">      expect(response.header[&quot;Accept&quot;]).to eq(&quot;application/json&quot;)</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="162">
           <span class="hits">1</span>
           
+          <code class="ruby">      expect(response).to be_successful</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="163">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(searches[&quot;data&quot;]).to eq([])</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="164">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response.header[&quot;Accept&quot;]).to eq(&quot;application/json&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="165">
+          <span class="hits">1</span>
+          
           <code class="ruby">      expect(response.header[&quot;Content-Type&quot;]).to eq(&quot;application/json&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="163">
+        <li class="never" data-hits="" data-linenumber="166">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="164">
+        <li class="never" data-hits="" data-linenumber="167">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="165">
+        <li class="never" data-hits="" data-linenumber="168">
           
           
           <code class="ruby">end</code>
