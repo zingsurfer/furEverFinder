@@ -10,6 +10,7 @@ RSpec.describe 'GET /api/v1/dog_pics/random', type: :request do
       expect(response.header["Accept"]).to eq("application/json")
       expect(response.header["Content-Type"]).to eq("application/json")
     end
+
     it 'returns a pic and saves the search without params' do
       get '/api/v1/dog_pics/random'
 
@@ -19,6 +20,7 @@ RSpec.describe 'GET /api/v1/dog_pics/random', type: :request do
       expect(response.header["Content-Type"]).to eq("application/json")
     end
   end
+  
   context 'invalid request' do
     it 'errors for nonexistant pics and does not save the search' do
       get '/api/v1/dog_pics/random?type=coOrgi'
