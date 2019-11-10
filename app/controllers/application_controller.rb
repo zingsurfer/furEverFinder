@@ -1,12 +1,13 @@
 class ApplicationController < ActionController::API
   before_action :set_headers
+  rescue_from ActionController::UnpermittedParameters, with: :unpermitted_params_response
 
-  rescue_from ActionController::UnpermittedParameters do |error|
+  private
+
+  def unpermitted_params_response(error)
     message = "Invalid query parameter(s): #{error.params.to_sentence}. Please verify the query parameter name(s)."
     render json: { error: message }, status: 400
   end
-
-  private
 
   def set_headers
     response.set_header("Accept", "application/json")
