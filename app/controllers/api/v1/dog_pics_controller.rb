@@ -6,7 +6,7 @@ class Api::V1::DogPicsController < ApplicationController
       render json: {error: "furEverFinder couldn't find a pic."}, status: 404
     else
       search_url = request.original_url
-      Search.create(url: search_url)
+      Search.create(url: search_url, topic: "dog_pics")
 
       render json: find, status: 200
     end
