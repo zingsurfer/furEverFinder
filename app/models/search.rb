@@ -1,4 +1,6 @@
 class Search < ApplicationRecord
+  before_save { topic.downcase! }
+
   validates_uniqueness_of :url
   validates_presence_of :url
 

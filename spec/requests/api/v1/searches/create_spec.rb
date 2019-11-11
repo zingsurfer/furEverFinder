@@ -5,7 +5,7 @@ describe 'POST /api/v1/searches/:id', type: :request do
   context 'when valid' do
     it 'creates a search record' do
       url = "https://matthewrayfield.com/goodies/inspect-this-snake/"
-      topic = "games"
+      topic = "Games"
 
       post "/api/v1/searches", params: { search: { url: url, topic: topic } }
 
@@ -20,7 +20,9 @@ describe 'POST /api/v1/searches/:id', type: :request do
       # Test that expected record is created & returned
       expect(search["data"]["attributes"]["url"]).to eq(Search.last.url)
       expect(search["data"]["attributes"]["url"]).to eq(url)
-      expect(search["data"]["attributes"]["topic"]).to eq(topic)
+      # Model downcases upcased topics
+      expect(search["data"]["attributes"]["topic"]).to eq(topic.downcase)
+      expect(Search.last.topic).to eq(topic.downcase)
     end
   end
 
