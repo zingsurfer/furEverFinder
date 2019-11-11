@@ -1,7 +1,7 @@
 class Api::V1::SearchesController < ApplicationController
   include ::ParamsHelper
 
-  before_action :set_search, only: [:show]
+  before_action :set_search, only: [:show, :destroy]
 
   rescue_from UnpermittedParamValue, with: :unpermitted_param_value_response
   rescue_from UnsupportedParamCombo, with: :unsupported_param_combo_response
@@ -12,6 +12,11 @@ class Api::V1::SearchesController < ApplicationController
 
   def show
     render json: Api::V1::SearchSerializer.new(@search), status: 200
+  end
+
+  def destroy
+    @search.destroy
+    render status: 204
   end
 
   private
