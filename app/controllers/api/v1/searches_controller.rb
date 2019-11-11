@@ -32,37 +32,6 @@ class Api::V1::SearchesController < ApplicationController
   end
 
   private
-
-  def set_search
-    @search = Search.find_by_id(params[:id])
-    if @search.nil?
-      raise ActiveRecord::RecordNotFound
-    end
-  end
-
-  def search_create_params
-    params.require(:search).permit(:topic, :url)
-  end
-
-  def search_index_params
-    params.permit(:ordered_by, :sorted_by_topic, :topic)
-  end
-
-  def search_update_params
-    # Users may only update allowed fields
-    params.require(:search).permit(:topic)
-  end
-
-  def requested_searches
-    topic = search_index_params[:topic]
-    order_request = search_index_params[:ordered_by]
-    sort_request = search_index_params[:sorted_by_topic]
-
-    filtered_searches = filter_searches(topic)
-
-    organize_searches(filtered_searches, order_request, sort_request)
-  end
-
   def filter_searches(topic)
     if topic.nil?
       Search.all
@@ -87,14 +56,44 @@ class Api::V1::SearchesController < ApplicationController
     end
   end
 
-  def validate_ordered_by_params
-    if !['newist_created', 'oldest_created'].include? search_index_params[:ordered_by]
-      raise UnpermittedParamValue.new(key: :ordered_by, value: search_index_params[:ordered_by])
-    end
+  def requested_searches
+    topic = search_index_params[:topic]
+    order_request = search_index_params[:ordered_by]
+    sort_request = search_index_params[:sorted_by_topic]
+
+    filtered_searches = filter_searches(topic)
+
+    organize_searches(filtered_searches, order_request, sort_request)
   end
 
   def save_search_validation_error_response
     render json: { error: "Mysterious validation error: it's possible this search url may already be saved." },
            status: 400
+  end
+
+  def search_create_params
+    params.require(:search).permit(:topic, :url)
+  end
+
+  def search_index_params
+    params.permit(:ordered_by, :sorted_by_topic, :topic)
+  end
+
+  def search_update_params
+    # Users may only update allowed fields
+    params.require(:search).permit(:topic)
+  end
+
+  def set_search
+    @search = Search.find_by_id(params[:id])
+    if @search.nil?
+      raise ActiveRecord::RecordNotFound
+    end
+  end
+
+  def validate_ordered_by_params
+    if !['newist_created', 'oldest_created'].include? search_index_params[:ordered_by]
+      raise UnpermittedParamValue.new(key: :ordered_by, value: search_index_params[:ordered_by])
+    end
   end
 end
