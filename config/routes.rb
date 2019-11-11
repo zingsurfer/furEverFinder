@@ -6,4 +6,5 @@ Rails.application.routes.draw do
       get '/dog_pics/random', to: 'dog_pics#show'
     end
   end
+  get '*other', to: redirect('/')
 end

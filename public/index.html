@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/solid.min.css" integrity="sha256-3FfMfpeajSEpxWZTFowWZPTv7k3GEu7w4rQv49EWsEY=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.1.0/themes/prism-a11y-dark.css" integrity="sha256-d2qy226pP+oHAtEQPujaiXPslYW1Rmtla3Ivu1fFYxU=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-switch@2.0.0/dist/css/bulma-switch.min.css" integrity="sha256-jCV/cXwP13w0GNHLgFx6SFgTNAvJPvS5MIhuE30Ng08=" crossorigin="anonymous">
-    
+
     <style>
       @media screen and (min-width: 768px) {
         .navbar-burger {
@@ -489,9 +489,9 @@
         const to = node.getBoundingClientRect();
         if (from.left === to.left && from.right === to.right && from.top === to.top && from.bottom === to.bottom)
             return noop;
-        const { delay = 0, duration = 300, easing = identity, 
+        const { delay = 0, duration = 300, easing = identity,
         // @ts-ignore todo: should this be separated from destructuring? Or start/end added to public api and documentation?
-        start: start_time = now() + delay, 
+        start: start_time = now() + delay,
         // @ts-ignore todo:
         end = start_time + duration, tick = noop, css } = fn(node, { from, to }, params);
         let running = true;
@@ -6153,15 +6153,15 @@
         function isString (value) {
             return Object.prototype.toString.apply(value) === '[object String]';
         }
-        
+
         function isNumber (value) {
             return Object.prototype.toString.apply(value) === '[object Number]';
         }
-        
+
         function isBoolean (value) {
             return Object.prototype.toString.apply(value) === '[object Boolean]';
         }
-        
+
         function join (arr, separator) {
             var
                 result = '',
@@ -12178,7 +12178,7 @@
     					if_block1.c();
     					if_block1.m(if_block1_anchor.parentNode, if_block1_anchor);
     				} else {
-    					
+
     				}
     			} else if (if_block1) {
     				if_block1.d(1);
@@ -13148,7 +13148,7 @@
     		c() {
     			a = element("a");
 
-    			a.innerHTML = `<span class="icon has-text-grey"><i class="fas fa-sign-out-alt" aria-hidden="true"></i></span> 
+    			a.innerHTML = `<span class="icon has-text-grey"><i class="fas fa-sign-out-alt" aria-hidden="true"></i></span>
   <span>Logout</span>`;
 
     			attr(a, "href", "javascript:void(0)");
@@ -13327,7 +13327,7 @@
     	};
     }
 
-    // (51:33) 
+    // (51:33)
     function create_if_block_3(ctx) {
     	let div1;
     	let div0;
@@ -14410,7 +14410,7 @@
     		c() {
     			button = element("button");
 
-    			button.innerHTML = `<span class="icon"><i class="fas fa-paper-plane"></i></span> 
+    			button.innerHTML = `<span class="icon"><i class="fas fa-paper-plane"></i></span>
             <span>Send</span>`;
 
     			attr(button, "class", "button is-success is-fullwidth");
@@ -15827,7 +15827,7 @@
     			info.ctx = ctx;
 
     			if (changed.response && promise !== (promise = ctx.response) && handle_promise(promise, info)) {
-    				
+
     			} else {
     				info.block.p(changed, assign(assign({}, ctx), info.resolved)); // nothing
     			}
@@ -17070,8 +17070,8 @@
     			t2 = space();
     			a1 = element("a");
 
-    			a1.innerHTML = `<span aria-hidden="true"></span> 
-        <span aria-hidden="true"></span> 
+    			a1.innerHTML = `<span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>`;
 
     			t5 = space();
@@ -17235,7 +17235,7 @@
     					if_block2.c();
     					if_block2.m(div3, t9);
     				} else {
-    					
+
     				}
     			} else if (if_block2) {
     				if_block2.d(1);
@@ -17248,7 +17248,7 @@
     					if_block3.c();
     					if_block3.m(div3, null);
     				} else {
-    					
+
     				}
     			} else if (if_block3) {
     				if_block3.d(1);
