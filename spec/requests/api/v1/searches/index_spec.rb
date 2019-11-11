@@ -177,18 +177,22 @@ describe 'GET /api/v1/searches', type: :request do
         expect(searches["data"].last["id"]).to eq(newist_search.id.to_s)
       end
 
-      it 'returns searches filtered by topic' do
-        topic = "finn"
-        get "/api/v1/searches?topic=#{topic}"
+      it 'returns searches sorted by topic' do
+        get "/api/v1/searches?sorted_by_topic=true"
 
         searches = JSON.parse(response.body)
 
         expect(response).to be_successful
         expect(searches["data"][0].keys).to match_array(["id", "type", "attributes"])
         expect(searches["data"][0]["attributes"].keys).to match_array(["topic", "url", "updated_at", "created_at"])
-        searches["data"].each do |search|
-          expect(search["attributes"]["topic"]).to eq(topic)
-        end
+
+        # Check that searches are alphabetically sorted by topic
+        expect(searches["data"].first["id"]).to eq(oldest_search.id.to_s)
+        expect(searches["data"][1]["id"]).to eq(oldest_finn_search.id.to_s)
+        expect(searches["data"][2]["id"]).to eq(newist_finn_search.id.to_s)
+        expect(searches["data"][3]["id"]).to eq(oldest_jake_search.id.to_s)
+        expect(searches["data"][4]["id"]).to eq(newist_jake_search.id.to_s)
+        expect(searches["data"].last["id"]).to eq(newist_search.id.to_s)
       end
 
       it 'returns searches filtered by topic' do
