@@ -3,14 +3,28 @@ class Api::V1::DogCEOService
     @type = type
   end
 
-  def random_pic_of_requested_dog_type
-    response = JSON.parse(response("#{@type}/images/random").body)
-    response["status"] !=  "error" ? response["message"] : nil
+  def random_dog_pic
+    if !@type
+      random_any_type_of_dog_pic
+    else
+      random_specific_type_of_dog_pic
+    end
   end
 
   private
+  
+  def random_specific_type_of_dog_pic
+    response = JSON.parse(response("breed/#{@type}/images/random").body)
+    response["status"] !=  "error" ? response["message"] : nil
+  end
+
+  def random_any_type_of_dog_pic
+    response = JSON.parse(response("breeds/image/random").body)
+    response["status"] !=  "error" ? response["message"] : nil
+  end
+
   def conn
-    Faraday.new(url: "https://dog.ceo/api/breed/") do |f|
+    Faraday.new(url: "https://dog.ceo/api/") do |f|
       f.adapter Faraday.default_adapter  # make requests with HTTP
     end
   end

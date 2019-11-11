@@ -1,14 +1,18 @@
 class Search < ApplicationRecord
+  before_save { topic.downcase! }
+
   validates_uniqueness_of :url
   validates_presence_of :url
 
-  def self.ordered_by_creation(ordered_by)
-    if ordered_by == "newist"
-      self.order("created_at DESC")
-    elsif ordered_by == "oldest"
-      self.order("created_at ASC")
-    else
-      []
+  scope :topic_filtered, -> (topic) {where(topic: topic)}
+  scope :topic_sorted, -> () {order(topic: :asc)}
+
+  # TODO: find a better way to handle this
+  def self.creation_ordered(order)
+    if order == "newist_created"
+      self.order(created_at: :desc)
+    elsif order == "oldest_created"
+      self.order(created_at: :asc)
     end
   end
 end
