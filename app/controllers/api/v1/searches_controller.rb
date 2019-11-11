@@ -1,16 +1,28 @@
 class Api::V1::SearchesController < ApplicationController
   include ::ParamsHelper
 
-  before_action :set_search, only: [:show, :destroy]
+  before_action :set_search, only: [:show, :update, :destroy]
 
   rescue_from UnpermittedParamValue, with: :unpermitted_param_value_response
   rescue_from UnsupportedParamCombo, with: :unsupported_param_combo_response
+  rescue_from ActiveRecord::RecordInvalid, with: :save_search_validation_error_response
+
+  def create
+    new_search = Search.create(search_create_params)
+    new_search.save!
+    render json: Api::V1::SearchSerializer.new(new_search), status: 201
+  end
 
   def index
     render json: Api::V1::SearchSerializer.new(requested_searches).serializable_hash, status: 200
   end
 
   def show
+    render json: Api::V1::SearchSerializer.new(@search), status: 200
+  end
+
+  def update
+    @search.update(search_update_params)
     render json: Api::V1::SearchSerializer.new(@search), status: 200
   end
 
@@ -28,8 +40,17 @@ class Api::V1::SearchesController < ApplicationController
     end
   end
 
+  def search_create_params
+    params.require(:search).permit(:topic, :url)
+  end
+
   def search_index_params
     params.permit(:ordered_by, :sorted_by_topic, :topic)
+  end
+
+  def search_update_params
+    # Users may only update allowed fields
+    params.require(:search).permit(:topic)
   end
 
   def requested_searches
@@ -70,5 +91,10 @@ class Api::V1::SearchesController < ApplicationController
     if !['newist_created', 'oldest_created'].include? search_index_params[:ordered_by]
       raise UnpermittedParamValue.new(key: :ordered_by, value: search_index_params[:ordered_by])
     end
+  end
+
+  def save_search_validation_error_response
+    render json: { error: "Mysterious validation error: it's possible this search url may already be saved." },
+           status: 400
   end
 end
