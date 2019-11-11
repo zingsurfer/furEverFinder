@@ -3,12 +3,16 @@ require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 
 require File.expand_path('../config/environment', __dir__)
+# require Dox descriptor files
 
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 require 'simplecov'
+require 'dox'
+
+Dir[Rails.root.join('spec/docs/**/*.rb')].each { |f| require f }
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
@@ -63,6 +67,12 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
+  # For living documention
+  config.after(:each, :dox) do |example|
+    example.metadata[:request] = request
+    example.metadata[:response] = response
+  end
+
   # Include factory bot methods
   config.include FactoryBot::Syntax::Methods
 
@@ -88,4 +98,10 @@ Shoulda::Matchers.configure do |config|
     with.test_framework :rspec
     with.library :rails
   end
+end
+
+# Configure dox for living documentation
+Dox.configure do |config|
+  config.header_file_path = Rails.root.join('spec/docs/api/v1/descriptors/header.md')
+  config.desc_folder_path = Rails.root.join('spec/docs/api/v1/descriptors')
 end

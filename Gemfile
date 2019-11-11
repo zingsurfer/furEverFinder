@@ -57,6 +57,7 @@ group :test do
   gem 'simplecov', require: false
   gem 'shoulda-matchers' # Library of one-liner tests
   gem 'database_cleaner' # Database cleaning
+  gem 'dox', require: false # Living documentation
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
