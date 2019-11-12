@@ -7,7 +7,7 @@ describe 'DogPics', type: :request do
     include Docs::DogPics::Show
 
     context 'valid request' do
-      it 'returns a pic and saves the search with params' do
+      it 'returns a pic and saves the search with specifiers', :dox do
         get '/api/v1/dog_pics/random?type=corgi'
 
         expect(Search.all.length()).to eq(1)
@@ -16,7 +16,7 @@ describe 'DogPics', type: :request do
         expect(response.header["Content-Type"]).to eq("application/json")
       end
 
-      it 'returns a pic and saves the search without params', :dox do
+      it 'returns a pic and saves the search without specifiers', :dox do
         get '/api/v1/dog_pics/random'
 
         expect(Search.all.length()).to eq(1)
@@ -27,7 +27,7 @@ describe 'DogPics', type: :request do
     end
 
     context 'invalid request' do
-      it 'errors for nonexistant pics and does not save the search' do
+      it 'errors for nonexistant pics and does not save the search', :dox do
         get '/api/v1/dog_pics/random?type=coOrgi'
 
         dog_pic = JSON.parse(response.body)
