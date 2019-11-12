@@ -1,5 +1,6 @@
 # furEverFinder
 <img src="https://user-images.githubusercontent.com/36902512/68681815-510baa00-0521-11ea-8e07-802e91c3b2db.jpg" alt="jamie-street-XyGq7VvgUhM-unsplash" height="400"/>
+
 ### Intro
 furEverFinder is an API for saving and fetching your searches!
 
