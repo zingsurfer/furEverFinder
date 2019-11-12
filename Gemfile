@@ -41,11 +41,14 @@ gem 'faker'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
+# Needed for living docs on prod
+gem 'rspec-rails' # Testing framework
+gem 'dox', require: false # Living documentation
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry' # Debugger
-  gem 'rspec-rails' # Testing framework
 end
 
 group :development do
@@ -57,7 +60,6 @@ group :test do
   gem 'simplecov', require: false
   gem 'shoulda-matchers' # Library of one-liner tests
   gem 'database_cleaner' # Database cleaning
-  gem 'dox', require: false # Living documentation
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
