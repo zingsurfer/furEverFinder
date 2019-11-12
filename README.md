@@ -1,5 +1,5 @@
 # furEverFinder
-
+<img src="https://user-images.githubusercontent.com/36902512/68681815-510baa00-0521-11ea-8e07-802e91c3b2db.jpg" alt="jamie-street-XyGq7VvgUhM-unsplash" height="400"/>
 ### Intro
 furEverFinder is an API for saving and fetching your searches!
 
@@ -295,6 +295,6 @@ Start a server with `rails s`, and visit `http://localhost:3000/`.
 
 ### Testing
 
-The test suite is created through RSpec. To run this test suite, run `rspec`. Currently, this repo maintains 100% test coverage.
+The test suite is created through RSpec. To run this test suite, run `rspec`. Currently, this repo maintains 100% test coverage. This can be viewed directly if you open the index file, furEverFinder/coverage/index.html, in a browser. 
 
-![]()
+<img width="1192" alt="Screen Shot 2019-11-12 at 7 57 09 AM" src="https://user-images.githubusercontent.com/36902512/68682353-3d147800-0522-11ea-9cbf-eedf869000b1.png">
