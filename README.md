@@ -26,8 +26,9 @@ In the future, this API could consume an API that offers a search engine for cat
 * Pagination
 
 ### Easy links
-- Heroku Docs: https://fur-ever-finder.herokuapp.com/
-- Searches (Index): https://fur-ever-finder.herokuapp.com/api/v1/searches
+- Heroku site: https://fur-ever-finder.herokuapp.com/
+- Project kanban: https://github.com/Autumn-Martin/furEverFinder/projects/1
+- Searches: https://fur-ever-finder.herokuapp.com/api/v1/searches
 - Random dog pic: https://fur-ever-finder.herokuapp.com/api/v1/dog_pics/random
 
 ## Endpoints
