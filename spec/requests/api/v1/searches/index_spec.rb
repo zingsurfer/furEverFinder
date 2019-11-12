@@ -186,7 +186,7 @@ describe 'Searches', type: :request do
         Search.delete_all
       end
       context 'when valid' do
-        it 'returns an empty array', :dox do
+        it 'returns an empty array if no searches exist', :dox do
           get '/api/v1/searches'
 
           searches = JSON.parse(response.body)
