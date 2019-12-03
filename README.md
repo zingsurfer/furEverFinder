@@ -8,7 +8,7 @@ furEverFinder endeavors to save your searches so that finds for the same search 
 
 If your looking for ideas, furEverFinder also consumes the [Dog CEO API](https://github.com/ElliottLandsborough/dog-ceo-api) (a random dog pic generator that enables you to specify a type of dog if you like). After searching for a random dog pic at `/api/v1/dog_pics/random`, head over to `/api/v1/searches`. If there's a dog and the search is unique, you will see it added to the list.
 
-Welcome to the GitHub repo! If you'd like to take a look at the app in all its deployed glory, check this out: https://github.com/Autumn-Martin/furEverFinder. Ideas & feedback are welcome.
+Welcome to the GitHub repo! If you'd like to take a look at the app in all its deployed glory, check this out: https://fur-ever-finder.herokuapp.com/. Ideas & feedback are welcome.
 
 #### Stack
 Rails 5.2.3, Ruby 2.5.1, RSpec, PostgreSQL, [Dox](https://github.com/infinum/dox) & [Aglio](https://github.com/danielgtaylor/aglio) (for living documentation), [FactoryBot](https://github.com/thoughtbot/factory_bot), [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers), [DatabaseCleaner](https://github.com/DatabaseCleaner/database_cleaner), [FastJSON API](https://github.com/Netflix/fast_jsonapi), [Faraday](https://github.com/lostisland/faraday)
